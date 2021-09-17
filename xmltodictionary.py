@@ -20,9 +20,9 @@ for file in json_report["report"]["files"]["file"]:
     filenames.append(os.path.basename(file["path"]))
     for p in file["properties"]["property"]:
         if p["key"] == "EXTRACTION_HITS" and p["value"] == "0":
-            precision.append(" ")
-            recall.append(" ")
-            f_measure.append(" ")
+            precision.append("")
+            recall.append("")
+            f_measure.append("")
         else:
             if p["key"] == "EXT_PRECISION":
                 precision.append(round(float(p["value"]), 2))
